@@ -7,4 +7,6 @@ RUN xbps-install -SyuR "${MIRROR}/current" xbps \
 	&& xbps-install -yuR "${MIRROR}/current" \
 		bash make git kmod xz lzo qemu-user-arm qemu-user-aarch64 binfmt-support outils dosfstools e2fsprogs ncurses
 
+RUN git clone https://github.com/lnoxsian/void-mklive /void-mklive
+
 CMD ["/bin/sh"]
